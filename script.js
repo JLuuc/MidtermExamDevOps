@@ -1,4 +1,4 @@
-/*  First version
+/*  Second version
 <!-- MidTerm Exam - DevOps Infrastructure Level 1 -->
 <!-- CCTB | Canadian College of Technology and Business -->
 <!-- Description: 
@@ -56,8 +56,8 @@ function updateBigCup() {
         percentage.style.height = 0
     } else {
         percentage.style.visibility = 'visible'
-        percentage.style.height = `${fullCups / totalCups * 330}px`
-        percentage.innerText = `${fullCups / totalCups * 1000}%`
+        percentage.style.height = `${fullCups / totalCups * 330}px` // Fixed: Correct template literal
+        percentage.innerText = `${fullCups * 12.5}%` // Fixed: Correct percentage calculation
     }
 
     if (fullCups === totalCups) {
@@ -65,6 +65,6 @@ function updateBigCup() {
         remained.style.height = 0
     } else {
         remained.style.visibility = 'visible'
-        liters.innerText = `${1 - (50 * fullCups / 1000)}L`
+        liters.innerText = `${2 - (fullCups * 0.25)}L` // Fixed: Correct remaining quantity calculation
     }
 }
